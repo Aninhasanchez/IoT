@@ -17,7 +17,7 @@ Cidade Inteligente
 ->Visualização Gráfica
 
 *ESP32*
-Publicar dados GoogleSheet
+Publicar dados GoogleSheets
 ->Alterar variável com seu nome
 
 *PRÁTICA LED/ESP32
