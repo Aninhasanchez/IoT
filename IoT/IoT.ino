@@ -12,7 +12,7 @@ void setup() {
   WiFi.begin(ssid, password);
   
   while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
+    delay(1000);
     Serial.println("Conectando ao WiFi...");
   }
   Serial.println("Conectado!");
@@ -42,5 +42,5 @@ void loop() {
     http.end();
   }
 
-  delay(1000); // Aguarda 10 segundos
+  delay(10000); // Aguarda 10 segundos
 }
