@@ -39,7 +39,6 @@ Adicionar sensores de presença ou luminosidade.
 
 Criar um app ou página web para visualizar os dados e controlar os atuadores remotamente.
 
-Se quiser, posso te ajudar com:
 
 Título mais formal
 
