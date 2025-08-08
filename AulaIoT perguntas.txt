@@ -1,0 +1,101 @@
+🌐 PROJETO INTEGRADOR - Cidade Inteligente
+🎯 Tema do Projeto:
+Transformar a escola em uma Cidade Inteligente, utilizando Internet das Coisas (IoT) para monitorar e controlar ambientes em tempo real.
+
+✅ Objetivo / Benefícios:
+Monitorar temperatura e umidade dos ambientes da escola.
+
+Acionar dispositivos remotamente (ex: LED).
+
+Visualizar dados em tempo real.
+
+Tomar decisões baseadas em dados (data-driven).
+
+Proporcionar conforto, economia de energia e segurança.
+
+⚙️ Recursos de IoT Utilizados:
+ESP32 como microcontrolador principal.
+
+Sensores ambientais (ex: DHT11, DHT22).
+
+LED como atuador simples.
+
+Google Sheets para armazenar e visualizar dados.
+
+Conexão WiFi para publicar dados na internet.
+
+🧠 ESP32 - Microcontrolador IoT
+📡 Publicar dados no Google Sheets
+Utilização de HTTP Requests (GET/POST) para enviar dados diretamente do ESP32 para uma planilha no Google Sheets.
+
+Necessário utilizar Apps Script para criar a API da planilha.
+
+Código no Arduino deve conter uma variável com seu nome para identificar o autor/teste:
+
+cpp
+Copiar
+Editar
+String nome = "Ana Luisa";
+
+🔍 PRÁTICA - LED com ESP32 na Protoboard
+🔌 Componentes:
+Protoboard
+
+LED
+
+Resistor (ex: 220Ω)
+
+Cabos jumper
+
+ESP32
+
+⚡️ Qual a tensão (V) para ligar o LED?
+Um LED comum funciona entre 1.8V e 2.2V (dependendo da cor):
+
+Vermelho: ~1.8V
+
+Verde: ~2.0V
+
+Azul: ~3.0V
+
+⚙️ Qual pino do ESP32 tem tensão para alimentar o LED?
+Qualquer pino digital configurado como OUTPUT.
+
+Exemplo comum: GPIO 2, GPIO 5, GPIO 13, etc.
+
+🔋 Qual é a tensão (V) de saída do ESP32?
+Pinos digitais do ESP32 fornecem 3.3V quando estão em nível HIGH.
+
+🔄 Resistor
+✅ Qual é a função do resistor?
+Limitar a corrente elétrica que passa pelo LED, protegendo-o contra queima.
+
+Sem resistor, o LED pode queimar rapidamente por excesso de corrente.
+
+🔣 Qual é a simbologia do resistor?
+Um retângulo ou uma linha em zigue-zague:
+
+css
+Copiar
+Editar
+[—/\/\/—] ou [—□—]
+🔢 Quais são os valores dos resistores disponíveis?
+Os mais comuns em kits de prototipagem:
+
+220Ω (ideal para LED)
+
+330Ω
+
+1kΩ
+
+10kΩ
+
+100kΩ
+
+Use a lei de Ohm para calcular o resistor ideal:
+
+makefile
+Copiar
+Editar
+R = (V_fonte - V_LED) / Corrente
+Ex: R = (3.3V - 2V) / 0.02A ≈ 65Ω → use 220Ω por segurança
