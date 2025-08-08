@@ -1,8 +1,3 @@
-de acordo com as informacoes que eu escrevi pra vc, me de um tema que pode funcionar com esses recursos
-
-
-O ChatGPT disse:
-Com base nas informações que você compartilhou, incluindo:
 
 Publicação de dados com ESP32
 
