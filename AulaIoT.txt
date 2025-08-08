@@ -25,3 +25,4 @@ Publicar dados GoogleSheets
 ->LED - Qual é a tensão (V) para ligar o LED?
 ->ESP32 - Qual pino tem tensão para alimentar o LED? - Qual é a tensão (V) de saída (output) do ESP32?
 -> Resistor - Qual é a função do resistor? - Qual é a simbologia do resistor? - Quais são os valores dos resistores disponíveis?
+
