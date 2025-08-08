@@ -1,4 +1,3 @@
-Se quiser, posso agora te ajudar com:
 
 Código Arduino
 
@@ -7,8 +6,6 @@ Apps Script para Google Sheets
 Diagrama do circuito
 
 PDF com essa estrutura
-
-O que você prefere fazer primeiro?
 
 
 
