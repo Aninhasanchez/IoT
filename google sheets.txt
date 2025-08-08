@@ -12,18 +12,6 @@ O que você prefere fazer primeiro?
 
 
 
-
-
-
-
-
-Você disse:
-o do google sheets
-
-
-O ChatGPT disse:
-Ótimo! Vamos configurar a publicação de dados do ESP32 no Google Sheets usando o Google Apps Script para criar uma API simples. O processo é dividido em 2 partes:
-
 🛠️ PARTE 1 — Criar API no Google Sheets
 1. Crie uma nova planilha no Google Drive
 Dê um nome como: Monitoramento IoT
