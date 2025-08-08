@@ -106,5 +106,3 @@ void loop() {
 
   delay(10000); // Aguarda 10 segundos
 }
-
-Se quiser, posso personalizar o código com o nome da sua rede e o link do seu Apps Script. Deseja isso?
