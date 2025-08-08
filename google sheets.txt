@@ -1,0 +1,125 @@
+Se quiser, posso agora te ajudar com:
+
+Código Arduino
+
+Apps Script para Google Sheets
+
+Diagrama do circuito
+
+PDF com essa estrutura
+
+O que você prefere fazer primeiro?
+
+
+
+
+
+
+
+
+Você disse:
+o do google sheets
+
+
+O ChatGPT disse:
+Ótimo! Vamos configurar a publicação de dados do ESP32 no Google Sheets usando o Google Apps Script para criar uma API simples. O processo é dividido em 2 partes:
+
+🛠️ PARTE 1 — Criar API no Google Sheets
+1. Crie uma nova planilha no Google Drive
+Dê um nome como: Monitoramento IoT
+
+2. Vá para Extensões > Apps Script
+Apague qualquer código existente e cole o seguinte script:
+
+javascript
+Copiar
+Editar
+function doGet(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Dados");
+
+  // Verifica se a aba existe
+  if (!sheet) {
+    sheet = SpreadsheetApp.getActiveSpreadsheet().insertSheet("Dados");
+    sheet.appendRow(["Data", "Hora", "Temperatura", "Umidade", "Nome"]);
+  }
+
+  // Pega os parâmetros da URL
+  var temperatura = e.parameter.temperatura;
+  var umidade = e.parameter.umidade;
+  var nome = e.parameter.nome;
+
+  // Data e hora atuais
+  var data = Utilities.formatDate(new Date(), "GMT-3", "dd/MM/yyyy");
+  var hora = Utilities.formatDate(new Date(), "GMT-3", "HH:mm:ss");
+
+  // Grava os dados
+  sheet.appendRow([data, hora, temperatura, umidade, nome]);
+
+  return ContentService.createTextOutput("Dados recebidos com sucesso");
+}
+3. Salve e clique em Implantar > Nova implantação
+Tipo de execução: Aplicativo da Web
+
+Descrição: API ESP32
+
+Executar como: Você mesmo
+
+Quem tem acesso: Qualquer pessoa
+
+Clique em Implantar, autorize com sua conta Google e copie o link da URL da Web.
+
+Exemplo:
+https://script.google.com/macros/s/AKfycby2.../exec
+
+🧠 PARTE 2 — ESP32 publica os dados
+No seu código Arduino (ESP32), use algo assim:
+
+cpp
+#include <WiFi.h>
+#include <HTTPClient.h>
+
+const char* ssid = "SUA_REDE_WIFI";
+const char* password = "SENHA_WIFI";
+
+String nome = "Ana Luisa"; // Substitua pelo seu nome
+const char* serverName = "https://script.google.com/macros/s/SEU_LINK_AQUI/exec";
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.begin(ssid, password);
+  
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Conectando ao WiFi...");
+  }
+  Serial.println("Conectado!");
+}
+
+void loop() {
+  if (WiFi.status() == WL_CONNECTED) {
+    HTTPClient http;
+
+    // Substitua pelos valores reais do sensor
+    String temperatura = "28.5";
+    String umidade = "65";
+
+    String url = String(serverName) + "?temperatura=" + temperatura + "&umidade=" + umidade + "&nome=" + nome;
+
+    http.begin(url);
+    int httpResponseCode = http.GET();
+
+    if (httpResponseCode > 0) {
+      String response = http.getString();
+      Serial.println("Resposta: " + response);
+    } else {
+      Serial.print("Erro na requisição: ");
+      Serial.println(httpResponseCode);
+    }
+
+    http.end();
+  }
+
+  delay(10000); // Aguarda 10 segundos
+}
+
+Se quiser, posso personalizar o código com o nome da sua rede e o link do seu Apps Script. Deseja isso?
