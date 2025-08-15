@@ -99,3 +99,18 @@ Copiar
 Editar
 R = (V_fonte - V_LED) / Corrente
 Ex: R = (3.3V - 2V) / 0.02A ≈ 65Ω → use 220Ω por segurança
+
+
+6) Quais são os valores de resistência dos resistores disponibilizados. Explique como interpretar as cores.
+
+Valores comuns para LED: 220 Ω, 330 Ω, 1 kΩ.
+
+Interpretação das cores → Código de cores de resistores (4 faixas):
+
+1ª faixa: primeiro dígito
+
+2ª faixa: segundo dígito
+
+3ª faixa: multiplicador (quantos zeros acrescentar)
+
+4ª faixa: tolerância
