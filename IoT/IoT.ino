@@ -1,8 +1,11 @@
-#include <WiFi.h>
-#include <HTTPClient.h>
+//Instalar Adafruit IO Arduino
 
-const char* ssid = "SUA_REDE_WIFI";
-const char* password = "SENHA_WIFI";
+#include <WiFi.h>
+#include <WiFiClientSecure.h>
+
+// Credenciais da rede Wi-Fi
+const char* ssid     = "WIFI_EDUC_CFP501";
+const char* password = "SENAICAMPINAS501";
 
 String nome = "Ana Luisa"; // Substitua pelo seu nome
 const char* serverName = "https://script.google.com/macros/s/SEU_LINK_AQUI/exec";
