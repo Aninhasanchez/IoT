@@ -52,13 +52,6 @@ Conexão com Google Sheets
 
 
 
-
-
-
-
-
-
-
 🏙️ Projeto Integrador
 Tema: Monitoramento Ambiental e Controle Remoto em Salas de Aula Inteligentes
 🎯 Objetivo Geral
